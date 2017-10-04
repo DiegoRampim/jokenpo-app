@@ -1,0 +1,25 @@
+{
+  "name": "jokenpo-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DiegoRampim/jokenpo-app.git"
+  },
+  "author": "Diego Rampim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DiegoRampim/jokenpo-app/issues"
+  },
+  "homepage": "https://github.com/DiegoRampim/jokenpo-app#readme",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4",
+    "express-load": "^1.1.16"
+  }
+}
