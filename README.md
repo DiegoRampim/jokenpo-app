@@ -1,4 +1,4 @@
-#Jokenpo API
+# Jokenpo API
 
 O `jokenpo-app` é uma API, desenvolvida para o jogo Jokenpo.
 
@@ -28,7 +28,7 @@ O sistema recebe uma lista de `players`, cada player contem um `name` e a sua jo
 que pode ser `STONE ` para pedra, 
 `PAPER` para papel e `SCISSORS` para tesoura, qualquer entrada diferente o sistema vai apontar erro.  
 
-###Modelo de request correto
+### Modelo de request correto
 
 **ENDPOINT**
 
@@ -70,7 +70,7 @@ Content-Type: application/json
 }
 ```
 
-###Modelo de request incorreto
+### Modelo de request incorreto
 
 **ENDPOINT**
 
@@ -83,17 +83,17 @@ POST http://localhost:3000
 ```json
 Content-Type: application/json
 
-{
- "players" : [
- 	{
- 		"name": "Player 1",
- 		"played" : "SCISSORS"
- 	},
-	{
-		"name": "Player 2",
-		"played" : "ROCK"
-	}
-	]
+{  
+   "players":[  
+      {  
+         "name":"Player 1",
+         "played":"SCISSORS"
+      },
+      {  
+         "name":"Player 2",
+         "played":"ROCK"
+      }
+   ]
 }
 ```
 
