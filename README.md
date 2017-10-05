@@ -83,17 +83,17 @@ POST http://localhost:3000
 ```json
 Content-Type: application/json
 
-{
- "players" : [
- 	{
- 		"name": "Player 1",
- 		"played" : "SCISSORS"
- 	},
-	{
-		"name": "Player 2",
-		"played" : "ROCK"
-	}
-	]
+{  
+   "players":[  
+      {  
+         "name":"Player 1",
+         "played":"SCISSORS"
+      },
+      {  
+         "name":"Player 2",
+         "played":"ROCK"
+      }
+   ]
 }
 ```
 
