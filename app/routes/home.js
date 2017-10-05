@@ -11,8 +11,7 @@ module.exports = function (app) {
         gameService.round(item, function (err, results) {
 
             if(err){
-                console.error(err);
-                res.status(500);
+                res.status(400);
                 res.json({"message":err});
                 return;
             }

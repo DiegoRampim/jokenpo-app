@@ -20,7 +20,7 @@ GameService.prototype.round = function (item, callback) {
     var result = {};
 
     if(playedPlayerOne > 3 || playedPlayerTwo > 3){
-        callback("Jogada invalida", null);
+        callback("invalid move", null);
         return;
     }
 
