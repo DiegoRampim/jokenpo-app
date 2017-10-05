@@ -1,5 +1,7 @@
 # Jokenpo API
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/03e6ef726e7e4cddbc69a21385f2efaf)](https://www.codacy.com/app/DiegoRampim/jokenpo-app?utm_source=github.com&utm_medium=referral&utm_content=DiegoRampim/jokenpo-app&utm_campaign=badger)
+
 O `jokenpo-app` é uma API, desenvolvida para o jogo Jokenpo.
 
 
