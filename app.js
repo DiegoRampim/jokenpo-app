@@ -1,8 +1,8 @@
-var app = require('./config/express')();
-var http = require('http').Server(app);
+var app = require("./config/express")();
+var http = require("http").Server(app);
 
 var porta = process.env.PORT || 3000;
 
 http.listen(porta, function(){
-    console.log("Servidor rodando \n Porta: " + porta);
+    console.log("Servidor rodando \nPorta: " + porta);
 });
