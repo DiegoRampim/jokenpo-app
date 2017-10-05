@@ -31,8 +31,6 @@ GameService.prototype.round = function (item, callback) {
         result.draw = true;
         result.winner = null;
 
-        console.log("Calc = 0 - Result: " + result);
-
         callback(null, result);
 
         return;
@@ -55,21 +53,21 @@ GameService.prototype.round = function (item, callback) {
     }
 
 
-}
+};
 
 
 
 getCodPlayed = function (player) {
 
-    if(player == 'PAPER'){
+    if(player == "PAPER"){
         return 1;
     }
 
-    if(player == 'STONE'){
+    if(player == "STONE"){
         return 2;
     }
 
-    if(player == 'SCISSORS'){
+    if(player == "SCISSORS"){
         return 3;
     }
 
