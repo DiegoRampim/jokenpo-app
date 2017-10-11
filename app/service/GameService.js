@@ -29,7 +29,7 @@ GameService.prototype.round = function (item, callback) {
     if(calc === 0){
 
         result.draw = true;
-        result.winner = null;
+        result.winner = {};
 
         callback(null, result);
 

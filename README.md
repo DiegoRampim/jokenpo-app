@@ -26,16 +26,19 @@ Para execultar o projeto utilize o comando `npm start` na raiz do projeto.
 
 Com essa API é possível gerar resultados para o jogo Jokenpo.
 
-O sistema recebe uma lista de `players`, cada player contem um `name` e a sua jogada `played`, 
-que pode ser `STONE ` para pedra, 
-`PAPER` para papel e `SCISSORS` para tesoura, qualquer entrada diferente o sistema vai apontar erro.  
+O sistema conta com dois tipos de jogo, multiplayer ou singleplayer.
+ 
+### Modo multiplayer
+ 
+No modo `multiplayer` o sistema recebe uma lista de `players`, cada player contem um `name` e a sua jogada `played`, 
+que pode ser `STONE ` para pedra, `PAPER` para papel e `SCISSORS` para tesoura, qualquer entrada diferente o sistema vai apontar erro.  
 
-### Modelo de request correto
+#### Modelo de request multiplayer
 
 **ENDPOINT**
 
 ```
-POST http://localhost:3000
+POST http://localhost:3000/multi
 ```
 
 **REQUEST**
@@ -71,13 +74,19 @@ Content-Type: application/json
     }
 }
 ```
+----
 
-### Modelo de request incorreto
+### Modo singleplayer
+ 
+No modo `singleplayer` o sistema recebe um objeto, que contem um `name` e a sua jogada `played`, 
+que pode ser `STONE ` para pedra, `PAPER` para papel e `SCISSORS` para tesoura, qualquer entrada diferente o sistema vai apontar erro.  
+
+#### Modelo de request singleplayer
 
 **ENDPOINT**
 
 ```
-POST http://localhost:3000
+POST http://localhost:3000/single
 ```
 
 **REQUEST**
@@ -86,18 +95,46 @@ POST http://localhost:3000
 Content-Type: application/json
 
 {  
-   "players":[  
-      {  
-         "name":"Player 1",
-         "played":"SCISSORS"
-      },
-      {  
-         "name":"Player 2",
-         "played":"ROCK"
-      }
-   ]
+    "name":"Player 1",
+    "played":"SCISSORS"
 }
 ```
+
+**RESPONSE**
+
+```json
+200 (OK)
+Content-Type: application/json
+
+{
+    "draw": false,
+    "winner": {
+        "played": "STONE",
+        "name": "IA"
+    }
+}
+```
+
+----
+
+### Em caso de empate o sistema retona
+
+**RESONSE**
+
+```json
+200 (OK)
+Content-Type: application/json
+
+{
+    "draw": true,
+    "winner": {}
+}
+```
+
+
+----
+
+### Em caso de jogada invalida o sistema retorna
 
 **RESPONSE**
 
@@ -109,3 +146,6 @@ Content-Type: application/json
     "message": "invalid move"
 }
 ```
+
+
+
