@@ -16,9 +16,9 @@ Para que possa ser executada a construção do projeto é necessário que você 
 
 Para baixar as dependências do projeto execute `npm install` na raiz do projeto. 
 
-### Execultando o projeto
+### Executando o projeto
 
-Para execultar o projeto utilize o comando `npm start` na raiz do projeto.
+Para executar o projeto utilize o comando `npm start` na raiz do projeto.
 
 ---
 
@@ -117,7 +117,7 @@ Content-Type: application/json
 
 ----
 
-### Em caso de empate o sistema retona
+### Em caso de empate o sistema retorna
 
 **RESONSE**
 
