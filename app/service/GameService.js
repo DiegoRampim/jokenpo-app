@@ -55,9 +55,35 @@ GameService.prototype.round = function (item, callback) {
 
 };
 
+GameService.prototype.ia = function (callback) {
+
+   //Math.floor(Math.random() * (max - min)) + min;
+
+    var result = {};
+
+    var option = Math.floor(Math.random() * (3)) + 1;
+
+    switch (option){
+        case 1 :
+                result.played = "PAPER";
+            break;
+
+        case 2 :
+                result.played = "STONE";
+            break;
+
+        case 3 :
+                result.played = "SCISSORS";
+            break;
+    }
+    result.name = "IA";
+
+    callback(result);
+};
 
 
-getCodPlayed = function (player) {
+
+function getCodPlayed (player) {
 
     if(player == "PAPER"){
         return 1;
@@ -72,8 +98,8 @@ getCodPlayed = function (player) {
     }
 
     return 100;
-}
+};
 
 module.exports = function () {
     return GameService;
-}
+};

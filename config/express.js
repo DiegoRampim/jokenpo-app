@@ -15,7 +15,7 @@ module.exports = function(){
     });
 
     load("routes",{cwd:"app"})
-        .then('service')
+        .then("service")
         .into(app);
 
     return app;
